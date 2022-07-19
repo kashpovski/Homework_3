@@ -3,10 +3,10 @@ import abc
 
 
 class Circle(Figure):
+    _name = "Круг"
 
     def __init__(self, a):
         self.radius = a
-        self._name = "Круг"
         self._area = self.area_calc()
         self._perimetr = self.l_circle_calc()
 

@@ -3,10 +3,10 @@ import abc
 
 
 class Square(Figure):
+    _name = "Квадрат"
 
     def __init__(self, a):
         self.side_1 = a
-        self._name = "Квадрат"
         self._area = self.area_calc()
         self._perimetr = self.perimetr_calc()
 
