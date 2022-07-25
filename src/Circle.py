@@ -6,9 +6,12 @@ class Circle(Figure):
     _name = "Круг"
 
     def __init__(self, a):
-        self.radius = a
-        self._area = self.area_calc()
-        self._perimetr = self.l_circle_calc()
+        if a > 0:
+            self.radius = a
+            self._area = self.area_calc()
+            self._perimetr = self.l_circle_calc()
+        else:
+            raise ValueError
 
     @abc.abstractmethod
     def l_circle_calc(self):
@@ -17,4 +20,3 @@ class Circle(Figure):
     @abc.abstractmethod
     def area_calc(self):
         return 3.14 * (self.radius ** 2)
-

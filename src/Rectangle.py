@@ -6,10 +6,13 @@ class Rectangle(Figure):
     _name = "Прямоугольник"
 
     def __init__(self, a, b):
-        self.side_1 = a
-        self.side_2 = b
-        self._area = self.area_calc()
-        self._perimetr = self.perimetr_calc()
+        if a > 0:
+            self.side_1 = a
+            self.side_2 = b
+            self._area = self.area_calc()
+            self._perimetr = self.perimetr_calc()
+        else:
+            raise ValueError
 
     @abc.abstractmethod
     def perimetr_calc(self):

@@ -25,3 +25,7 @@ class Triangle(Figure):
         perimetr_half = (self.side_1 + self.side_2 + self.side_3) / 2
         return round(m.sqrt(perimetr_half * (perimetr_half - self.side_1) *
                             (perimetr_half - self.side_2) * (perimetr_half - self.side_3)))
+
+a = Triangle(2, 2, 3)
+
+
